@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <%- include('./header.ejs') %>
+            </div>
+           
+            <div class="col-md-3">
+                <%- include('./left.ejs') %>
+            </div>
+            <div class="col-md-6  border border-1 ">
+                <form class="mt-2" method="post" action="/addproduct"  enctype="multipart/form-data">
+                 
+                        <tr>
+                <td><label class="text-danger fw-bold">Upload Your Car Image</label><br>
+                    <input type="file" name="pfile" size="100" class="border w-100"></td></tr>
+                <td>
+                    <label class="fw-bold text-danger">Car Name
+                    </label><br>
+                    <input type="text" name="pname" class="w-100">
+                </td>
+                <tr>
+                    <label class="fw-bold text-danger">Car Gross price
+                    </label><br>
+                    <input type="text" name="pprice" class="w-100">
+                </tr>
+                <tr>
+                    <label class="fw-bold text-danger">Car Final price
+                    </label><br>
+                    <input type="text" name="pdiscount" class="w-100">
+                </tr>
+                <tr>
+                    <label class="fw-bold text-danger">Company name
+                    </label><br>
+                    <select name="category">
+                        <option >Select your product</option>
+                        <option value="honda">Honda</option>
+                        <option value="maruti">Maruti</option>
+                        <option value="skoda">Skoda</option>
+                    </select><br>
+                </tr>
+
+                <tr >
+                    <label class="fw-bold text-danger">Car Quantity
+                    </label><br>
+                    <input class="w-100" type="number" name="quantity">
+                </tr>
+               
+                <input type="submit"  class="bg-danger text-light rounded-3 p-2 shadow-lg" name="submit" >
+      
+            </tr>
+    
+            </form>
+          
+        </div>
+    </div>
+</body>
+</html>
