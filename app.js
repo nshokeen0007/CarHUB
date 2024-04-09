@@ -9,24 +9,13 @@ const app=express()
 app.use(express.static('upload'))
 app.use(express.static('views'))
 app.use('/static',express.static('public'))
-const router=express.Router()
+// const router=express.Router()
 
 app.set('view engine','ejs')
-const multer=require('multer')
 const bodyParser=require('body-parser')
 app.use(bodyParser.urlencoded({extended:true}))
 
-const bcrypt=require('bcryptjs')
-
-
-// DATABASE 
-require('./Db/mongoconnection')
-
-// signup schema
-const USERDATA=require('./Models/singup_schema')
-
-//add product schema
-const Addpro=require('./Models/addproduct_schema')
+const router=import("./Routes/Router")
 
 
 

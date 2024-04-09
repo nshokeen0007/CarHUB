@@ -1,0 +1,7 @@
+header{
+    height: 500px;
+    background:linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(/static/images/carbanner2.jpg);
+    background-position:center;
+    background-size: cover;
+}

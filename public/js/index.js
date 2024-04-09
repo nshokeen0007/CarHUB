@@ -28,7 +28,7 @@ $(document).ready(function(){
         url:'/checkdata',
         method:'post',
         type:'json',
-        data:{},
+        data:{from_location:from_location,to_date:to_date,from_date:from_date},
         success:function(){
           
         }
