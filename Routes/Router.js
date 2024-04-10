@@ -18,6 +18,7 @@ const Addpro=require('../Models/addproduct_schema')
 
 
 
+
 router.get('/',(req,res)=>{
     res.render('index')
    })
@@ -219,38 +220,6 @@ router.get('/',(req,res)=>{
            }
    
        })
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
    
    router.get('/viewcategory',(req,res)=>{
