@@ -1,6 +1,7 @@
 const router=require('express').Router();
 const multer=require('multer')
 const bcrypt=require('bcryptjs')
+const jwt=require('jsonwebtoken')
 
 
 
@@ -10,7 +11,6 @@ const USERDATA=require('../Models/singup_schema')
 
 //add product schema
 const Addpro=require('../Models/addproduct_schema')
-
 
 
 
