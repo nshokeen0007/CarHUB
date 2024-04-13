@@ -5,3 +5,42 @@ header{
     background-position:center;
     background-size: cover;
 }
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* crousel content */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    display: flex;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+  /* croausel end  */

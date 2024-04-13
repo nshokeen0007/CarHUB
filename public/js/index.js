@@ -36,3 +36,28 @@ $(document).ready(function(){
     
 })
 })
+
+
+
+const carouselSlide = document.querySelector('.carousel-slide');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+const images = document.querySelectorAll('.carousel-slide img');
+
+let counter = 0;
+const size = images[0].clientWidth;
+
+function slideNext() {
+  if (counter >= images.length - 1) return;
+  counter++;
+  carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+}
+
+function slidePrev() {
+  if (counter <= 0) return;
+  counter--;
+  carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+}
+
+nextButton.addEventListener('click', slideNext);
+prevButton.addEventListener('click', slidePrev);
