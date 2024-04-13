@@ -1,6 +1,6 @@
 header{
     height: 500px;
-    background:linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    background:linear-gradient(to right,rgba(218, 106, 106, 0.6),rgba(0,0,0,0.6)),
     url(/static/images/carbanner2.jpg);
     background-position:center;
     background-size: cover;
@@ -10,37 +10,3 @@ header{
     object-fit: cover;
   }
 
-  /* crousel content */
-  .carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel-slide {
-    display: flex;
-  }
-  
-  .carousel-slide img {
-    width: 100%;
-    transition: transform 0.5s ease;
-  }
-  
-  .prev-button,
-  .next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .prev-button {
-    left: 10px;
-  }
-  
-  .next-button {
-    right: 10px;
-  }
-  /* croausel end  */
