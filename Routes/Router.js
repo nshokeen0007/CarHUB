@@ -3,6 +3,8 @@ const multer=require('multer')
 const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 
+const authenticateToken = require('../views/middleware/authanticateToken');
+
 
 
 
@@ -33,6 +35,7 @@ router.get('/',(req,res)=>{
    router.post('/login',async(req,res)=>{
        const email=req.body.email;
        const password=req.body.password;
+       console.log('hit')
    
        try{
            const user=await USERDATA.findOne({email:email})
@@ -44,8 +47,11 @@ router.get('/',(req,res)=>{
               if(!matchpass){
                res.redirect('/login')
               }else{
+                const token = jwt.sign({ userId: user._id }, 'NikhilDagame', { expiresIn: '1h' });
+               console.log(token,'mm')
+               res.setHeader('Authorization', `Bearer ${token}`);
    
-               console.log('login successful')
+               console.log('login successful')  
           
            }
            }
@@ -54,11 +60,12 @@ router.get('/',(req,res)=>{
    
    
        }catch(err){
+        console.log(err);
            throw err
        }
    })
    
-   router.get('/signup',(req,res)=>{
+   router.get('/signup',authenticateToken,(req,res)=>{
        res.render('signup')
    })
    

@@ -18,8 +18,9 @@ app.use(bodyParser.urlencoded({extended:true}))
 require('./Db/mongoconnection')
 let router=require("./Routes/Router")
 
+const authenticateToken = require('./views/middleware/authanticateToken');
 
-
+app.use(authenticateToken);
 app.use(
     session({
         secret:'iamdevagooddev',
