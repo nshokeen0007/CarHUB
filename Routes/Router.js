@@ -301,7 +301,20 @@ router.get('/',(req,res)=>{
 
 
 
+router.post('/checkData', async (req, res) => {
+    try {
+        const data = req.body.data;
 
+ console.log(data,'data')
+        const result = await USERDATA.findOne({ email: data });
+
+     
+        res.json({ exists: !!result });
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
 
 router.get('/resetPass',async(req,res)=>{

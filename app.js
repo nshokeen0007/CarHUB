@@ -21,6 +21,7 @@ let router=require("./Routes/Router")
 // const authenticateToken = require('./views/middleware/authanticateToken');
 
 // app.use(authenticateToken);
+app.use(express.json());
 app.use(
     session({
         secret:'iamdevagooddev',
