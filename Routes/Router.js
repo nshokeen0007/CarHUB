@@ -305,12 +305,12 @@ router.post('/checkData', async (req, res) => {
     try {
         const data = req.body.data;
 
-        const result = await USERDATA.findOne({ $or: [{ email: data }, { mobileNumber: data }] });
+        // const result = await USERDATA.findOne({ $or: [{ email: data }, { mobileNumber: data }] });
 
         // and both condition true wala 
         // const result = await USERDATA.findOne({ $and: [{ email: data }, { mobileNumber: data }] });
 
-        // const result = await USERDATA.findOne({ email: data });
+        const result = await USERDATA.findOne({ email: data });
         console.log(result,'rr')
 
      if(result == null) {
