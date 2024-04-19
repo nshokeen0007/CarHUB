@@ -304,7 +304,13 @@ router.get('/',(req,res)=>{
 
 
 
-
+router.get('/resetPass',async(req,res)=>{
+    try{
+        res.render( 'reset_password')  ;
+    }catch(err){
+        throw err
+    }
+})
 
 
 
