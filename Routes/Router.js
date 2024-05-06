@@ -5,37 +5,37 @@ const jwt=require('jsonwebtoken')
 
 
 // for sms
-const twilio = require('twilio');
-const apiKeySid = 'your_api_key_sid';
-const apiKeySecret = 'your_api_key_secret';
-const authToken = '2222222222222ffffffffffffssssssss11';
-const twilioPhoneNumber = '8802480960';
+// const twilio = require('twilio');
+// const apiKeySid = 'your_api_key_sid';
+// const apiKeySecret = 'your_api_key_secret';
+// const authToken = '2222222222222ffffffffffffssssssss11';
+// const twilioPhoneNumber = '8802480960';
 
-const client = twilio(apiKeySid, apiKeySecret, { accountSid: 'AC1111' });
+// const client = twilio(apiKeySid, apiKeySecret, { accountSid: 'AC1111' });
 
-function generateOTP() {
+// function generateOTP() {
 
-    return Math.floor(100000 + Math.random() * 900000).toString();
-}
+//     return Math.floor(100000 + Math.random() * 900000).toString();
+// }
 
-function sendOTP(phoneNumber) {
-    const otp = generateOTP();
-    const message = `Your OTP is: ${otp}`;
+// function sendOTP(phoneNumber) {
+//     const otp = generateOTP();
+//     const message = `Your OTP is: ${otp}`;
 
  
-    client.messages
-        .create({
-            body: message,
-            from: twilioPhoneNumber,
-            to: phoneNumber
-        })
-        .then(message => console.log("OTP sent successfully!"))
-        .catch(err => console.error("Error sending OTP:", err));
+//     client.messages
+//         .create({
+//             body: message,
+//             from: twilioPhoneNumber,
+//             to: phoneNumber
+//         })
+//         .then(message => console.log("OTP sent successfully!"))
+//         .catch(err => console.error("Error sending OTP:", err));
 
-    return otp;
-}
-const phoneNumber = '+918700877112'; 
-const sentOTP = sendOTP(phoneNumber);
+//     return otp;
+// }
+// const phoneNumber = '+918700877112'; 
+// const sentOTP = sendOTP(phoneNumber);
 
 
 const authenticateToken = require('../views/middleware/authanticateToken');
