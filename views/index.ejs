@@ -123,6 +123,42 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<div class="gg">
+
+  <button class="clickclass">button</button>
+<span class="data this" src="/static/images/carbanner2.jpg" img-data="1" id="xyz"></span>
+</div>
 
 
+
+<script>
+  $(document).on('click', '.clickclass', function() {
+    const spandata = $(this).closest('.gg').find('.data');
+    const gg = $('<img>').addClass('data');
+
+   
+    $.each(spandata[0].attributes, function() {
+      gg.attr(this.name, this.value);
+    });
+
+    spandata.replaceWith(gg);
+    console.log(gg, 'imagedata');
+  });
+
+  $(document).on('click', '.clickclass', function() {
+    var ggContainer = $(this).closest('.gg');
+    ggContainer.find('.data').each(function() {
+      var pp = $(this);
+      var imagedata = $('<img>').addClass('data');
+
+      $.each(pp[0].attributes, function() {
+        imagedata.attr(this.name, this.value);
+      });
+
+      pp.replaceWith(imagedata);
+      console.log(imagedata, 'imagedata');
+    });
+  });
+
+  </script>
 <script src="/static/js/index.js"></script> 

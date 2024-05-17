@@ -3,15 +3,10 @@ const multer=require('multer')
 const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 
-
+require('dotenv').config()
 // for sms
-// const twilio = require('twilio');
-// const apiKeySid = 'your_api_key_sid';
-// const apiKeySecret = 'your_api_key_secret';
-// const authToken = '2222222222222ffffffffffffssssssss11';
-// const twilioPhoneNumber = '8802480960';
 
-// const client = twilio(apiKeySid, apiKeySecret, { accountSid: 'AC1111' });
+
 
 // function generateOTP() {
 
