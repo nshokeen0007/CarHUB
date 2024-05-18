@@ -133,32 +133,36 @@
 
 <script>
   $(document).on('click', '.clickclass', function() {
-    const spandata = $(this).closest('.gg').find('.data');
-    const gg = $('<img>').addClass('data');
+  //  const spandata = $(this).closest('.gg').find('.data');
+  //   const gg = $('<img>').addClass('data'); 
+  // console.log($(this).closest('.gg').find('span'),'dd')
+  console.log(this,'mm')
 
-   
-    $.each(spandata[0].attributes, function() {
-      gg.attr(this.name, this.value);
-    });
+    $(this).closest('.gg').find('span').replaceWith (function(i,content){ 
+    return "<img>" + content + " " ;
+});
+    // $.each(spandata[0].attributes, function() {
+    //   gg.attr(this.name, this.value);
+    // });
 
-    spandata.replaceWith(gg);
-    console.log(gg, 'imagedata');
+    // spandata.replaceWith(gg);
+    // console.log(gg, 'imagedata');
   });
 
-  $(document).on('click', '.clickclass', function() {
-    var ggContainer = $(this).closest('.gg');
-    ggContainer.find('.data').each(function() {
-      var pp = $(this);
-      var imagedata = $('<img>').addClass('data');
+  // $(document).on('click', '.clickclass', function() {
+  //   var ggContainer = $(this).closest('.gg');
+  //   ggContainer.find('.data').each(function() {
+  //     var pp = $(this);
+  //     var imagedata = $('<img>').addClass('data');
 
-      $.each(pp[0].attributes, function() {
-        imagedata.attr(this.name, this.value);
-      });
+  //     $.each(pp[0].attributes, function() {
+  //       imagedata.attr(this.name, this.value);
+  //     });
 
-      pp.replaceWith(imagedata);
-      console.log(imagedata, 'imagedata');
-    });
-  });
+  //     pp.replaceWith(imagedata);
+  //     console.log(imagedata, 'imagedata');
+  //   });
+  // });
 
   </script>
 <script src="/static/js/index.js"></script> 
