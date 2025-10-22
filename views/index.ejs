@@ -133,14 +133,23 @@
 
 <script>
   $(document).on('click', '.clickclass', function() {
-  //  const spandata = $(this).closest('.gg').find('.data');
-  //   const gg = $('<img>').addClass('data'); 
-  // console.log($(this).closest('.gg').find('span'),'dd')
-  console.log(this,'mm')
 
-    $(this).closest('.gg').find('span').replaceWith (function(i,content){ 
-    return "<img>" + content + " " ;
-});
+    let element=document.getElementById('xyz');
+    
+    console.log(element)
+    console.log(element.toString())
+    console.log(JSON.stringify(element))
+  //   document.querySelector('.gg')
+  //  const spandata = $(this).closest('.gg');
+
+  // console.log(JSON.stringify(spandata))
+  // //   const gg = $('<img>').addClass('data'); 
+  // // console.log($(this).closest('.gg').find('span'),'dd')
+  // console.log(this,'mm')
+
+  //   $(this).closest('.gg').find('span').replaceWith (function(i,content){ 
+  //   return "<img>" + content + " " ;
+// });
     // $.each(spandata[0].attributes, function() {
     //   gg.attr(this.name, this.value);
     // });
